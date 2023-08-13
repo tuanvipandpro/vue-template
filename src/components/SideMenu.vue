@@ -4,8 +4,6 @@
       <el-menu
         class="el-menu-vertical-demo"
         :default-active="defaultActive"
-        @open="handleOpen"
-        @close="handleClose"
         style="height: calc(100vh - 76px)"
       >
         <el-menu-item index="1" @click="transitTo('/')">
@@ -23,28 +21,15 @@
   
 <script setup>
 import {
-  Document,
   Menu as IconMenu,
-  Location,
   Setting,
 } from "@element-plus/icons-vue";
 import { ref } from "vue";
-import { useRouter, useRoute } from "vue-router";
+import { useTransit } from "../router";
+import { MENU_TYPE } from '../utils/constants'
 
-const route = useRoute()
-const router = useRouter();
+const { transitTo, getIndexMenuItem } = useTransit()
+const defaultActive = ref(getIndexMenuItem(MENU_TYPE.SIDE).index)
 
-const defaultActive = ref('0')
-
-const menus = [
-  {path: '/', index: '1'},
-  {path: '/admin', index: '2'}
-]
-
-defaultActive.value = menus.find(e => route.path === e.path).index
-
-const transitTo = (path, params) => {
-  router.push(path, params);
-};
 </script>
   
