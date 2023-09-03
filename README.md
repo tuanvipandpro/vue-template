@@ -1,4 +1,7 @@
 # Vue 3 + Vite
+![Vue](https://img.shields.io/badge/Vue-v3.3.4-42b883)
+![Vite](https://img.shields.io/badge/Vite-v4.4.0-646CFF)
+![ElementPlus](https://img.shields.io/badge/ElementPlus-v2.3.7-E6860E)
 
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
