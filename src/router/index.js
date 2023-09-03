@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, useRouter, useRoute } from "vue-router";
+import { createRouter, createWebHashHistory, useRouter, useRoute } from "vue-router";
 import Login from "../views/Login.vue";
 import NotFound from "../views/404.vue";
 import DashboardLayout from "../layouts/DashboardLayout.vue";

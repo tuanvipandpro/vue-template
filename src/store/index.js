@@ -1,10 +1,7 @@
-import { defineStore } from 'pinia';
+import { createPinia } from "pinia";
+import { useSampleStore } from "./sample.store";
 
-export const useStore = defineStore('store', {
-  state: () => ({
-    // Các state
-  }),
-  actions: {
-    // Các actions
-  },
-});
+const pinia = createPinia();
+pinia.use(useSampleStore);
+
+export default pinia;
