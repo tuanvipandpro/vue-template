@@ -1,15 +1,14 @@
 import { defineStore } from 'pinia'
 import api from '../api/api'
 
-export const useSampleStore = defineStore('sampleStore', {
+export const useSampleStore = defineStore('sample', {
     state: () => ({
         text: ''
     }),
     actions: {
         async apiGetSample() {
             const res = await api.get('/get')
-            console.log(res.data)
-            this.text = 'Hello, I am Pinia'
+            this.text = res.data
         }
     }
 })

@@ -12,8 +12,8 @@ import { useSampleStore } from '../../store/sample.store';
 const router = useRouter()
 const sampleStore = useSampleStore()
 
-// const res = await sampleStore.apiGetSample()
-// console.log(res)
+await sampleStore.apiGetSample()
+console.log(sampleStore.text)
 
 const logout = () => {
   localStorage.clear()
